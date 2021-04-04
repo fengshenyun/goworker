@@ -1,6 +1,7 @@
 package goworker
 
 import (
+	"context"
 	"crypto/tls"
 	"crypto/x509"
 	"errors"
@@ -26,7 +27,7 @@ func (r *RedisConn) Close() {
 }
 
 func newRedisFactory(uri string) pools.Factory {
-	return func() (pools.Resource, error) {
+	return func(ctx context.Context) (pools.Resource, error) {
 		return redisConnFromURI(uri)
 	}
 }
