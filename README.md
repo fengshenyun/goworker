@@ -1,7 +1,7 @@
 # goworker
 
-![Build](https://github.com/benmanns/goworker/workflows/Go/badge.svg)
-[![GoDoc](https://godoc.org/github.com/benmanns/goworker?status.svg)](https://godoc.org/github.com/benmanns/goworker)
+![Build](https://github.com/fengshenyun/goworker/workflows/Go/badge.svg)
+[![GoDoc](https://godoc.org/github.com/fengshenyun/goworker?status.svg)](https://godoc.org/github.com/fengshenyun/goworker)
 
 goworker is a Resque-compatible, Go-based background worker. It allows you to push jobs into a queue using an expressive language like Ruby while harnessing the efficiency and concurrency of Go to minimize job latency and cost.
 
@@ -12,13 +12,13 @@ goworker workers can run alongside Ruby Resque clients so that you can keep all 
 To install goworker, use
 
 ```sh
-go get github.com/benmanns/goworker
+go get github.com/fengshenyun/goworker
 ```
 
 to install the package, and then from your worker
 
 ```go
-import "github.com/benmanns/goworker"
+import "github.com/fengshenyun/goworker"
 ```
 
 ## Getting Started
@@ -42,7 +42,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/benmanns/goworker"
+	"github.com/fengshenyun/goworker"
 )
 
 func myFunc(queue string, args ...interface{}) error {
@@ -68,7 +68,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/benmanns/goworker"
+	"github.com/fengshenyun/goworker"
 )
 
 func newMyFunc(uri string) (func(queue string, args ...interface{}) error) {
@@ -97,7 +97,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/benmanns/goworker"
+	"github.com/fengshenyun/goworker"
 )
 
 func myFunc(queue string, args ...interface{}) error {
@@ -221,7 +221,7 @@ as a JSON object with keys `queue`, `run_at`, and `payload`, but the process is 
 
 ## Contributing
 
-1. [Fork it](https://github.com/benmanns/goworker/fork)
+1. [Fork it](https://github.com/fengshenyun/goworker/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
